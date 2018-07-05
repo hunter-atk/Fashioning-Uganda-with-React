@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Montserrat|Josefin+Sans|Abril+Fatface|Comfortaa|Fredoka+One|Passion+One|Shrikhand");
+
+#banner {
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(./images/ugandaFashion3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+#heading {
+  display: inline-block;
+  margin-left: 10%;
+}
+
+#heading h1 {
+  color: #092072;
+  font-family: "Abril Fatface", "Times New Roman", Times, serif;
+  font-size: 3em;
+}
+
+#divider {
+  width: 30%;
+  color: #092072;
+  margin-bottom: 40px;
+}
+
+#heading h2 {
+  color: #092072;
+  font-family: "Comfortaa", "Times New Roman", Times, serif;
+}
+
+#home-description {
+  background-color: #232323;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+#first-column {
+  width: 15%;
+  margin-left: 13%;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  margin-right: 30px;
+}
+
+#second-column {
+  width: 55%;
+}
+
+#descriptionAside {
+  font-family: "Montserrat";
+}
