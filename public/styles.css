@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Montserrat|Josefin+Sans|Abril+Fatface|Comfortaa|Fredoka+One|Passion+One|Shrikhand");
 
+p,
+a {
+  font-family: "Montserrat", "Arial", "Times New Roman" !important;
+}
+
 #banner {
   height: 100vh;
   overflow: hidden;
@@ -18,7 +23,7 @@
 #heading h1 {
   color: #092072;
   font-family: "Abril Fatface", "Times New Roman", Times, serif;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 #divider {
@@ -28,33 +33,123 @@
 }
 
 #heading h2 {
-  color: #092072;
+  color: #e52441;
   font-family: "Comfortaa", "Times New Roman", Times, serif;
 }
 
 #home-description {
-  background-color: #232323;
+  background-color: #08224c;
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5); */
+  flex-wrap: nowrap;
 }
 
 #first-column {
-  width: 15%;
-  margin-left: 13%;
+  width: 17%;
   display: flex;
   justify-content: flex-end;
   text-align: right;
   margin-right: 30px;
+  font-size: 1.3em;
+  line-height: 1.4;
+  color: #355384;
+  font-weight: 400;
 }
 
 #second-column {
   width: 55%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #d1d1d1;
 }
 
 #descriptionAside {
   font-family: "Montserrat";
+}
+
+#about {
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+  padding-top: 60px;
+}
+
+#about-header {
+  color: #e52441;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 2.625rem;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Comfortaa", "Times New Roman", Times, serif;
+}
+
+#switcher-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px 0 30px 0;
+}
+
+#switcher1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  padding: 0;
+  list-style: none;
+}
+
+#switcher1 li {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#switcher2 {
+  visibility: hidden;
+}
+
+#contact {
+  background-image: url("images/ugandaFashion.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.contactContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  background-color: #232323;
+  padding: 30px 0 30px 0;
+  color: #d1d1d1;
+  font-family: "Comfortaa";
+  font-weight: 400;
+}
+
+.contactLinks {
+  width: 25%;
+  margin-right: 8%;
+  display: flex;
+  justify-content: flex-start;
+}
+.webMasterEmail {
+  width: 25%;
+  margin-left: 4%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.darkGrayText {
+  text-decoration-color: red;
 }

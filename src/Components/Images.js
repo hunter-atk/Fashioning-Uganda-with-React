@@ -5,7 +5,8 @@ import ReactDOM from "react-dom";
 
 const Images = props => {
   const images = props.images;
-  return <ul>{images}</ul>;
+  console.log(images);
+  return <ul>{images.length}</ul>;
 };
 
 export default Images;

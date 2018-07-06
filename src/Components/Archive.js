@@ -11,16 +11,23 @@ class Archive extends Component {
     super(props);
 
     this.state = { images: [] };
+  }
 
+  /*
+   * This is where you can update your state each time the component is "mounted" / initially loaded.
+   */
+  componentWillMount() {
     itemsRef.on("value", snapshot => {
-      let imageList = [];
-      for (let image in snapshot.val()) {
-        imageList.push(snapshot.val().image);
-      }
-      this.setState({ images: imageList });
-      console.log(snapshot.val());
-      console.log(imageList);
+      const lessAwkardThisWay = snapshot.val();
+      const imgArrCopy = Object.assign([], this.state.images);
+      Object.keys(lessAwkardThisWay).map(val => {
+        imgArrCopy.push(lessAwkardThisWay[val]);
+        this.setState({
+          images: imgArrCopy
+        });
+      });
     });
+    console.log(this.state.images);
   }
 
   render() {
