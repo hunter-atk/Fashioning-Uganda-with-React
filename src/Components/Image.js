@@ -1,25 +1,32 @@
 import React, { Component } from "react";
 import firebase from "../firebase.js";
+import Hay from "./Hay";
 
 const FirebasePromise = props => {
   firebase
     .storage()
     .ref()
     .child("images/" + props.fileName)
-    .getDownloadURL();
+    .getDownloadURL()
+    .then(url => {
+      console.log(url);
+      return url;
+    })
+    .catch(function(error) {});
 };
 
-const Example = props => (
-  <FirebasePromise fileName={props.fileName}>
-    {url => <p>The url is {url}</p>}
-  </FirebasePromise>
-);
-
+// const Example = props => (
+//   <FirebasePromise fileName={props.fileName}>
+//     {url => <p>The url is {url}</p>}
+//   </FirebasePromise>
+// );
+// {
+/* <Example fileName={image.fileName} /> */
+// }
 const Image = ({ image }) => {
-  console.log(image);
   return (
     <li>
-      <Example fileName={image.fileName} />
+      <Hay key={image.imageID} image={image} />
       <div>{image.imageID}</div>
       <div>{image.imageDate}</div>
     </li>

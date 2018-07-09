@@ -1,5 +1,376 @@
 @import url("https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Montserrat|Josefin+Sans|Abril+Fatface|Comfortaa|Fredoka+One|Passion+One|Shrikhand");
 
+@import url("https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Montserrat|Josefin+Sans|Abril+Fatface|Comfortaa|Fredoka+One|Passion+One|Shrikhand");
+
+html,
+body {
+  height: 100%;
+}
+h1 {
+  color: #092072 !important;
+  font-family: "Comfortaa", "Times New Roman", Times, serif !important;
+}
+/* #c16886 */
+nav {
+  background-color: white !important;
+}
+label {
+  font-family: "Montserrat" !important;
+}
+img {
+  image-orientation: from-image !important;
+}
+p,
+a {
+  font-family: "Montserrat", "Arial", "Times New Roman" !important;
+}
+ul li {
+  font-family: "Montserrat" !important;
+}
+.inputStyle {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 3px 5px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+  height: 25px;
+}
+hr.style2 {
+  border-top: 3px double #8c8b8b !important;
+}
+.utlogo {
+  display: flex;
+  justify-content: left;
+  width: 220px;
+  height: 50px;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.accountLogo {
+  display: flex;
+  justify-content: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+.accountLoginContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 35px;
+}
+.uk-navbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+.uk-navbar-center {
+  display: flex;
+  justify-content: center !important;
+}
+.contact {
+  display: flex;
+  align-items: flex-start;
+}
+.contactEmails {
+  width: 25%;
+  margin-left: 8%;
+  display: flex;
+  justify-content: flex-start;
+}
+.contactContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  background-color: #232323;
+  padding: 30px 0 30px 0;
+}
+.contactLinks {
+  width: 25%;
+  margin-right: 8%;
+  display: flex;
+  justify-content: flex-start;
+}
+.webMasterEmail {
+  width: 25%;
+  margin-left: 4%;
+  display: flex;
+  justify-content: flex-start;
+}
+.copyright {
+  justify-content: center;
+  background-color: #232323;
+  padding: 15px, 5px, 15px, 5px;
+}
+.copyrightText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+}
+.darkGrayText {
+  text-decoration-color: red;
+}
+.uk-subnav-pill .uk-active a {
+  background-color: white !important;
+  color: black !important;
+}
+.staticParallax {
+  background-image: url("ugandaFashionBig.png");
+  height: 100%;
+  background-attachment: fixed !important;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.staticParallax2 {
+  background-image: url("homeBackground.jpeg");
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.staticParallax3 {
+  background-image: url("./images/ugandaFashion.jpg");
+  height: 70%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.tint {
+  z-index: 1;
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  height: 260px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+.white-text {
+  color: white;
+}
+.dark-background {
+  background-color: #232323 !important;
+}
+.hidden {
+  display: none !important;
+}
+/* .imgThumbnail {width: 550px; height: 220px;} */
+/* .newResultContainer {
+} */
+.web_archive {
+  font-family: "Abril Fatface", "Times New Roman", Times !important;
+  font-size: 4.5em !important;
+  display: inline-block !important;
+  white-space: wrap !important;
+  width: 40%;
+}
+.magImageBackground {
+  background-image: url("homeBackground.jpeg");
+}
+.uk-button-primary {
+  background-color: #e52441 !important;
+}
+.uk-legend {
+  font-family: "Comfortaa";
+}
+.uk-input {
+  font-family: "Montserrat" !important;
+}
+.uk-button {
+  font-family: "Montserrat" !important;
+}
+/* .searchBarDiv {margin-right: 70px;} */
+/* .container {padding: 1rem;} */
+/* #archiveContainer {display: flex !important;} */
+#signInLink {
+  color: #092072 !important;
+}
+#collectiveWebsite {
+  color: #e52441 !important;
+}
+#descriptionAside {
+  font-family: "Montserrat";
+}
+#switcher1 li {
+  display: inline-block;
+  white-space: nowrap;
+}
+#archive_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  font-family: "Josefin Sans", "Times New Roman";
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  color: white;
+  font-style: bold;
+}
+#archive_header_container {
+  width: 100%;
+  padding: 20px 0 20px 0;
+}
+#archiveSearchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#archiveSearchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.archiveResultsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  max-width: 100%;
+  padding: 10px 10px 10px 10px;
+}
+#web_archive2 {
+  font-family: "Comfortaa", "Times New Roman", Times !important;
+  font-size: 1.5em !important;
+  display: inline-block !important;
+  white-space: wrap !important;
+  width: 60%;
+  color: #e52441 !important;
+}
+#homeDescriptionSection {
+  background-color: #232323;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5);
+}
+#homeDescription {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  color: gray;
+  font-size: 1.2em;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#homeImageSection {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+#aboutTextSection {
+  width: 74%;
+  margin-left: 13%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#first-column {
+  width: 15%;
+  margin-left: 13%;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  margin-right: 30px;
+}
+#second-column {
+  width: 55%;
+}
+#descriptionColumns {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 50px 0 30px 0;
+}
+#switcherContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px 0 30px 0;
+}
+#switcherContainer h1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#collectiveWebsitePink {
+  color: #bb5522;
+}
+#searchBar {
+  width: 30%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+/* #searchBar:focus {width: 30%;} */
+#searchSubmit {
+  height: 40px;
+}
+
+[type="date"] {
+  background: #fff
+    url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+    97% 50% no-repeat;
+  font-family: "Montserrat";
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+  font-family: "Montserrat";
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  font-family: "Montserrat";
+}
+
+#container {
+  width: 820px;
+  height: 100px;
+  overflow: hidden;
+}
+#container.rotate90,
+#container.rotate270 {
+  width: 100px;
+  height: 820px;
+}
+#image {
+  transform-origin: top left;
+  /* IE 10+, Firefox, etc. */
+  -webkit-transform-origin: top left;
+  /* Chrome */
+  -ms-transform-origin: top left;
+  /* IE 9 */
+}
+#container.rotate90 #image {
+  transform: rotate(90deg) translateY(-100%);
+  -webkit-transform: rotate(90deg) translateY(-100%);
+  -ms-transform: rotate(90deg) translateY(-100%);
+}
+#container.rotate180 #image {
+  transform: rotate(180deg) translate(-100%, -100%);
+  -webkit-transform: rotate(180deg) translate(-100%, -100%);
+  -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+#container.rotate270 #image {
+  transform: rotate(270deg) translateX(-100%);
+  -webkit-transform: rotate(270deg) translateX(-100%);
+  -ms-transform: rotate(270deg) translateX(-100%);
+}
+
 p,
 a {
   font-family: "Montserrat", "Arial", "Times New Roman" !important;
@@ -37,18 +408,18 @@ a {
   font-family: "Comfortaa", "Times New Roman", Times, serif;
 }
 
-#home-description {
+/* #home-description {
   background-color: #08224c;
   width: 100%;
   display: flex;
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  /* box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5);
   flex-wrap: nowrap;
-}
+} */
 
-#first-column {
+/* #first-column {
   width: 17%;
   display: flex;
   justify-content: flex-end;
@@ -66,20 +437,20 @@ a {
   font-weight: 400;
   line-height: 1.5;
   color: #d1d1d1;
-}
+} */
 
-#descriptionAside {
+/* #descriptionAside {
   font-family: "Montserrat";
-}
+} */
 
-#about {
+/* #about {
   height: 100vh;
   overflow: hidden;
   padding: 20px;
   padding-top: 60px;
-}
+} */
 
-#about-header {
+/* #about-header {
   color: #e52441;
   display: flex;
   justify-content: center;
@@ -88,16 +459,16 @@ a {
   line-height: 1.2;
   font-weight: 400;
   font-family: "Comfortaa", "Times New Roman", Times, serif;
-}
+} */
 
-#switcher-container {
+/* #switcher-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 30px 0 30px 0;
-}
+} */
 
-#switcher1 {
+/* #switcher1 {
   display: flex;
   flex-wrap: wrap;
   margin-right: -20px;
@@ -112,9 +483,9 @@ a {
 
 #switcher2 {
   visibility: hidden;
-}
+} */
 
-#contact {
+/* #contact {
   background-image: url("images/ugandaFashion.jpg");
   height: 100vh;
   background-attachment: fixed;
@@ -122,9 +493,9 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-}
+} */
 
-.contactContainer {
+/* .contactContainer {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -135,9 +506,9 @@ a {
   color: #d1d1d1;
   font-family: "Comfortaa";
   font-weight: 400;
-}
+} */
 
-.contactLinks {
+/* .contactLinks {
   width: 25%;
   margin-right: 8%;
   display: flex;
@@ -153,3 +524,7 @@ a {
 .darkGrayText {
   text-decoration-color: red;
 }
+
+.archive-image {
+  max-width: 400px;
+} */

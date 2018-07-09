@@ -26,11 +26,11 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(
-  <div>
-    <App />
-  </div>,
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   <div>
+//     <App />
+//   </div>,
+//   document.getElementById("root")
+// );
 
 export default App;

@@ -1,49 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <meta name="description" content="This website houses a digital archive of 6000 images of New Vision magazine, published in Uganda.">
-  <meta name="keywords" content="geography, university of texas, beauty, fashion, national science foundation, archive">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="shortcut icon" href="%PUBLIC_URL%/Uganda-icon.png">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.8/js/uikit.min.js"></script>
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-  <title>Fashioning Uganda</title>
+    <title>Fashioning Uganda</title>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/Uganda-icon.png">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit.css" />
+    <link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit-rtl.css" />
+    <link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit-rtl.min.css" />
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="uikit-3.0.0-beta.40/js/uikit.js"></script>
+    <script src="uikit-3.0.0-beta.40/js/uikit.min.js"></script>
+    <script src="uikit-3.0.0-beta.40/js/uikit-icons.js"></script>
+    <script src="uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <meta name="description" content="This website houses a digital archive of 6000 images of New Vision magazine, published in Uganda.">
+    <meta name="keywords" content="geography, university of texas, beauty, fashion, national science foundation, archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<body id="indexBody" class="uk-animation-fade">
+    <!-- <div style="display: none" id="hideAll">&nbsp;</div> -->
+    <header>
+        <div>
+            <nav class="uk-navbar-container" uk-navbar>
+                <div>
+                    <img src="./images/geographyLogo.png" alt="" class="utlogo">
+                </div>
+                <div class="uk-navbar-center">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#second-column">About</a>
+                        </li>
+                        <li>
+                            <a href="#contactContainer">Contact</a>
+                        </li>
+                        <li id="archiveLink" class="hidden">
+                            <a href="archive.html">Archive</a>
+                        </li>
+                        <li id="adminLink" class="hidden">
+                            <a href="admin_console.html">My Account</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="accountLoginContainer">
+                    <img src="./images/accountLogo.png" alt="" class="accountLogo">
+                    <p>
+                        <a id="signInLink" href="#modal-example" uk-toggle>Login</a>
+                    </p>
+                    <div id="modal-example" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <container id="signInContainer">
+                                <form>
+                                    <fieldset class="uk-fieldset">
 
-<body id="root">
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <!-- <div id="root"></div> -->
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+                                        <legend class="uk-legend">Log In</legend>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+                                        <div class="uk-margin">
+                                            <input class="uk-input" id="txtEmail" type="email" placeholder="Email">
+                                        </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+                                        <div class="uk-margin">
+                                            <input class="uk-input" id="txtPassword" type="password" placeholder="Password">
+                                        </div>
+
+                                        <div class="uk-margin">
+                                            <button id="btnLogin" class="uk-button uk-button-default uk-button-primary btn btn-action">Log In</button>
+
+                                            <button id="btnSignUp" class="hidden uk-button uk-button-default btn btn-secondary">Sign Up</button>
+
+
+                                            <button id="btnLogout" class="uk-button uk-button-default uk-button-primary btn btn-action hidden">Log Out</button>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </container>
+                        </div>
+                    </div>
+                    <div>
+            </nav>
+            </div>
+    </header>
+
+    <section id="homeImageSection" class="uk-background-cover uk-light uk-flex" style="background-image: url(./images/ugandaFashion3.png);">
+        <div class="uk-width-1-2@m uk-text-left uk-margin-auto uk-margin-auto-vertical">
+            <h1 uk-parallax="opacity: 1,1; y: 0,0; x: -240, -240; scale: 1,1; viewport: 0.1;" class=".uk-text-uppercase web_archive">Fashioning Uganda</h1>
+            <hr id="divider" uk-parallax="opacity: 1,1; y: 0,0; x: -240, -240; scale: 1,1; viewport: 0.1;" class="style2" style="width: 30%;"></hr>
+            <h3 id="web_archive2" uk-parallax="opacity: 1,1; y: 0,0; x: -240, -240; scale: 1,1; viewport: 0.1;" class=".uk-text-uppercase">20 Years of Style in Uganda's Pearl</h3>
+        </div>
+    </section>
+    <section id="homeDescriptionSection">
+
+        <article id="descriptionColumns">
+            <div id="first-column">
+                <h3 id="descriptionAside">A study of Uganda's beauty and fashion industries through a global-intimate lens</h3>
+                <br>
+            </div>
+            <div id="second-column">
+                <p>Welcome! This web archive contains 6000 images of decades' worth of magazine and newspaper content published
+                    by New Vision Printing & Publishing Company Limited (NVPPCL), a multimedia business started in March
+                    1986 in Uganda. Dr. Caroline Faria and the Feminist Geography Collective at the University of Texas'
+                    Department of Geography and the Environment use these images as data for their work on Dr. Faria's NSF
+                    project concerning the beauty and fashion industry in Uganda. These images, aquired in Uganda in 2016,
+                    have been made available on this website to university students and faculty for their own research. Feel
+                    free to browse the web archive for images, or explore the site to learn more about Dr. Faria, her research,
+                    and UT's Feminist Geography Collective.</p>
+            </div>
+        </article>
+    </section>
+    <section id="aboutTextSection">
+        <div id="switcherContainer">
+            <h1 style="color: #e52441 !important;">
+                About our work...
+            </h1>
+            <ul id="switcher1" class="uk-subnav uk-subnav-pill" uk-switcher>
+                <li>
+                    <a href="#">Dr. Caroline Faria</a>
+                </li>
+                <li>
+                    <a href="#">Feminist Geography Collective</a>
+                </li>
+                <li>
+                    <a href="#">Research</a>
+                </li>
+                <li>
+                    <a href="#">Peer Mentoring & Professional Development</a>
+                </li>
+            </ul>
+
+            <ul id="switcher2" class="uk-switcher uk-margin">
+                <li>
+                    <p>
+                        Dr. Faria is a feminist geographer and Assistant Professor in the Department of Geography and the Environment at UT Austin.
+                        Her research brings together critical strands of geographic thought to interrogate the past-presents
+                        of nationalism, cosmopolitanism and neoliberal globalization. She views a postcolonial and intersectional
+                        lens as imperative, given its attentiveness to gender, race, class and sexual logics, their roots
+                        in and across place, their work producing and transforming national, ‘modern’, colonial and cosmopolitan
+                        subjects and spaces, and the efforts of women and others marginalized by these processes to negotiate,
+                        rework and resist. Her current research, funded by the National Science Foundation, examines the
+                        political-economies of the beauty industry in the Gulf-East African region.
+                    </p>
+                    <p>
+                        Her research and activist work are intertwined. A central imperative of her work is to support women and minority geographers,
+                        and those excited by geographic approaches but who may not see a place for themselves in the discipline.
+                        This work includes; building and sustaining faculty-student and peer-peer mentoring networks for
+                        undergraduates, graduates and fellow faculty; mentoring around research, writing, publication, and
+                        securing academic positions; and both writing on and practicing diverse geographic futures.
+                    </p>
+                    <p>
+                        This work is grounded in part through the activities of the
+                        <a id="collectiveWebsite" href="https://universityoftexas.wixsite.com/femgeogcollective">Feminist Geography Collective</a> at UT, the Young and Emerging Scholars Task force (YES!) under
+                        the
+                        <a id="collectiveWebsite" href="https://igugender.wixsite.com/igugender">IGU – Gender Commission</a>, and varied collaborations and support networks with collectives, organizations,
+                        and research groups that share these feminist and anti-racist ethics.
+                    </p>
+                </li>
+                <li>
+                    <p>Our collective brings together faculty, graduate and undergraduate students from within and beyond Geography
+                        conducting research on power and place. Our research centers the politics of globalization and commodity
+                        flows. Our broader activist goal is to foster healthy, vibrant, and supportive academic spaces for
+                        feminist geographic research, to support the scholarship of women and minority students, and to connect
+                        to geographic, scholarly, and activist communities working globally.
+                    </p>
+                    <p>
+                        We are passionate about feminist geographic thought and practice, and keen to make it public! We see this both as vital in
+                        nuancing debates around complex issues and in attracting women and students of color into the discipline
+                        of geography. To that end, we mix in and complement our academic research and publications, with
+                        public scholarship and outreach. This has included (and with support from the Public Fellows OpEd
+                        project) a series of opinion pieces on
+                        <a id="collectiveWebsite" href="http://msmagazine.com/blog/2017/01/10/creek-murder-feminist-eye-geography-violence/">campus violence</a> and
+                        <a id="collectiveWebsite" href="https://www.tribtalk.org/2017/04/19/a-better-place-to-build-a-wall/">urban poverty and disinvestment</a>.
+                    </p>
+                    <p>
+                        We have also presented a number of public lectures and interviews on our research, including on public scholarship and feminist
+                        practices,
+                        <a id="collectiveWebsite" href="https://www.youtube.com/watch?v=U3HBYG8c98I">doing feminist political geography</a>, and
+                        <a id="collectiveWebsite" href="https://hairspunintogold.wordpress.com/2015/11/10/how-to-get-research-funding-as-an-undergrad/">finding undergraduate research funding</a>. Our efforts also focus on topics and conversations designed
+                        to get women and minority students excited about geography, and support them in becoming geographers.
+                        Enjoy and share!
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Our work with the collective takes two key forms: research and peer-mentoring / professional development.
+                    </p>
+                    <p>
+                        Our research centers around the theme of globalization and commodity flows related to Dr. Faria's NSF-funded research on
+                        globalization in the Gulf-East African region. This project focuses on the hair and beauty industry
+                        connecting East Africa and the Gulf, and in particular Uganda and Dubai, UAE. It also highlights
+                        ways in which global processes are intricately intwined with and shaped by the intimate.​
+                    </p>
+                    <p>
+                        Some examples of research-related work include:​
+                    </p>
+                    <ul>
+                        <li>Creating maps of shopping centers in Dubai</li>
+                        <li>Conducting literature reviews on topics relevant to Dr. Faria’s research and our own individual research</li>
+                        <li>Attending and presenting our research at UT based and national conferences, including the AAGs and
+                            the ASAs</li>
+                        <li>Transcribing interviews and focus groups</li>
+                        <li>Conducting visual discourse analyses of images, advertisements, and archival materials</li>
+                        <li>Developing our website, the IGU - Gender Commission website, and this web archive</li>
+                        <li>Developing ties to other feminist geography research groups globally</li>
+                        <li>Hosting guest speakers and workshopping guest scholars' papers</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        We are also committed to peer-mentoring and the professional development of women and minority geographers. Some examples
+                        of our work in this area include:
+                    </p>
+                    <ul>
+                        <li>Organizing and participating in a panel session on Collectives at the 2017 Feminist Geography annual
+                            conference at UNC</li>
+                        <li>Conducting workshops on funding undergraduate research</li>
+                        <li>Peer-mentoring within the collective around poster design and research, panel organizing, academic
+                            publishing, research design, methods, and analysis</li>
+                        <li>Support in navigating graduate school applications</li>
+                        <li>Networking with feminist geography collectives globally</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="staticParallax3"></div>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <!-- <script src="userLogin/scripts.js"></script> -->
+
 </body>
+
+<footer>
+    <section class="contactContainer" id="contactContainer">
+        <div class="contact">
+
+        </div>
+        <div class="contactEmails">
+            <span>
+                <p>
+                    <strong>Dr. Caroline Faria</strong>
+                    <br>
+                    <br> Assistant Professor
+                    <br> Department of Geography & the Environment
+                    <br> University of Texas
+                    <br> cvfaria@austin.utexas.edu
+                </p>
+            </span>
+        </div>
+        <div class="webMasterEmail">
+            <span>
+                <p>
+                    <strong>Hunter Jefferson</strong>
+                    <br>
+                    <br> Web Developer &
+                    <br> Research Assistant
+                    <br> hunterjefferson@utexas.edu
+                    <br> &nbsp;
+                </p>
+            </span>
+        </div>
+        <div class="contactLinks">
+            <h2 style="font-family: Comfortaa;">Visit the Collective's
+                <a id="collectiveWebsite" href="https://universityoftexas.wixsite.com/femgeogcollective">website</a> to learn more about our work</h2>
+            <span>
+
+            </span>
+        </div>
+    </section>
+    <section class="copyright" style="">
+        <div class="copyrightText">&copy; 2018 UT Feminist Geography Collective. All rights reserved. | Austin, TX </div>
+    </section>
+</footer>
 
 </html>
