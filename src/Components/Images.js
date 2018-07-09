@@ -3,10 +3,12 @@ import Image from "./Image";
 import firebase from "../firebase.js";
 import ReactDOM from "react-dom";
 
-const Images = props => {
-  const images = props.images;
-  console.log(images);
-  return <ul>{images.length}</ul>;
+const Images = ({ images }) => {
+  const imageItems = images.map(image => {
+    return <Image key={image.imageID} image={image} />;
+  });
+
+  return <ul>{imageItems}</ul>;
 };
 
 export default Images;

@@ -27,7 +27,6 @@ class Archive extends Component {
         });
       });
     });
-    console.log(this.state.images);
   }
 
   render() {

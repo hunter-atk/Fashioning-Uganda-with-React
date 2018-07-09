@@ -1,19 +1,28 @@
 import React, { Component } from "react";
 import firebase from "../firebase.js";
-// import ReactDOM from "react-dom";
 
-// ReactDOM.render(
-//   <div>
-//     <h1>This is the HomePage!</h1>
-//   </div>,
-//   document.getElementById("root")
-// );
+const FirebasePromise = props => {
+  firebase
+    .storage()
+    .ref()
+    .child("images/" + props.fileName)
+    .getDownloadURL();
+};
 
-const Image = () => {
+const Example = props => (
+  <FirebasePromise fileName={props.fileName}>
+    {url => <p>The url is {url}</p>}
+  </FirebasePromise>
+);
+
+const Image = ({ image }) => {
+  console.log(image);
   return (
-    <div>
-      <h1>This is an image</h1>
-    </div>
+    <li>
+      <Example fileName={image.fileName} />
+      <div>{image.imageID}</div>
+      <div>{image.imageDate}</div>
+    </li>
   );
 };
 
