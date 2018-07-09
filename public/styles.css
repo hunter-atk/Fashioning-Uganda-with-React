@@ -408,6 +408,17 @@ a {
   font-family: "Comfortaa", "Times New Roman", Times, serif;
 }
 
+#about-header-photo {
+  visibility: hidden;
+  text-align: right;
+  width: 220px;
+  color: #232323;
+  font-size: 0.7em;
+  position: relative;
+  margin-left: 750px;
+  margin-top: 50px;
+}
+
 /* #home-description {
   background-color: #08224c;
   width: 100%;
